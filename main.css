@@ -1,0 +1,132 @@
+body {
+  font-family: "Vazirmatn";
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-rows: auto auto auto auto auto;
+  grid-template-areas:
+    "nav"
+    "section"
+    "aside"
+    "features"
+    "footer";
+}
+
+.navbar {
+  grid-area: nav;
+  background-color: #222;
+  color: white;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 40px;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  margin: 0 15px;
+  font-size: 1.2rem;
+}
+
+.navbar a:hover {
+  color: #ffcc00;
+}
+
+.section {
+  grid-area: section;
+  background: url("./images/Ariya.png") no-repeat center center/cover;
+  background-color: #f9f9f9;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.section-info {
+  backdrop-filter: blur(2px);
+  background-color: rgba(255, 255, 255, 0.4);
+  border-radius: 26px;
+  box-shadow: inset 0px 0px 68px 0px rgba(155, 160, 167, 0.5),
+    inset -8px -8px 16px 0px rgba(155, 160, 167, 0.6),
+    inset 0px 11px 28px 0px rgb(255, 255, 255);
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 2rem;
+  font-weight: bold;
+  color: royalblue;
+}
+
+.section-txt {
+  color: #1e1d1d;
+  font-size: 1rem;
+}
+
+.section-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 10px;
+}
+
+.section-btn button {
+  width: 90px;
+  height: 31px;
+  font-size: 15px;
+  font-weight: bold;
+  border-radius: 8px;
+  background-color: royalblue;
+  color: white;
+}
+
+.aside {
+  grid-area: aside;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  background-color: #f4f4f4;
+  height: 240px;
+}
+
+.aside-right {
+  background-color: #222;
+  color: #f9f9f9;
+}
+
+.aside-title span {
+  color: #ffcc00;
+}
+
+.aside-left {
+  background: url("./images/Ariya2.png") no-repeat center center/cover;
+}
+
+.features {
+  grid-area: features;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  height: 250px;
+  background-color: #f4f4f4;
+}
+
+.feature {
+  background: white;
+  padding: 15px;
+  text-align: center;
+}
+
+.feature h3 {
+  margin-bottom: 10px;
+  font-size: 1.2rem;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: #222;
+  color: white;
+}
